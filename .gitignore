@@ -13,6 +13,9 @@ package-lock.json
 logs
 npm-debug.log*
 
+# 💬 Output data
+data/**/*.html
+
 # 💬 Temporary
 .tmp
 tmp

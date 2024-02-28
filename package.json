@@ -29,5 +29,17 @@
     "@toridoriv/cheerio": "^1.0.6",
     "tslog": "^4.9.2",
     "zod": "^3.22.4"
+  },
+  "config": {
+    "@toridoriv": {
+      "files": {
+        "ignore": {
+          "output": {
+            "title": "Output data",
+            "paths": ["data/**/*.html"]
+          }
+        }
+      }
+    }
   }
 }
