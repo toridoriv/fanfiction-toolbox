@@ -11,4 +11,9 @@ export default [
   ...eslintConfig.json,
   ...eslintConfig.markdown,
   ...eslintConfig.prettier,
+  {
+    rules: {
+      "jsdoc/informative-docs": ["warn", { excludedTags: ["default"] }],
+    },
+  },
 ];

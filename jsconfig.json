@@ -12,7 +12,7 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "noEmit": true,
-    "noErrorTruncation": false,
+    "noErrorTruncation": true,
     "noImplicitAny": true,
     "noImplicitOverride": false,
     "noImplicitReturns": true,
@@ -32,6 +32,7 @@
     "useUnknownInCatchVariables": true,
   },
   "exclude": ["node_modules"],
+  "include": ["./*.js", "./lib/**/*.js", "./test/**/*.js"],
   "typeAcquisition": {
     "enable": false,
   },
