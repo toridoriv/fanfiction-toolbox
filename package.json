@@ -19,6 +19,7 @@
     "email": "vrodriguezfe@icloud.com"
   },
   "scripts": {
+    "start": "node -r dotenv/config lib/index.js",
     "test:unit": "node --test --experimental-test-coverage test/unit"
   },
   "devDependencies": {
