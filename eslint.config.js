@@ -16,7 +16,10 @@ export default [
       "jsdoc/informative-docs": ["warn", { excludedTags: ["default"] }],
       "no-unused-vars": [
         "warn",
-        { varsIgnorePattern: "^KeyOf$|^Language$|^Input$|^Output$|^Expand$" },
+        {
+          varsIgnorePattern:
+            "^KeyOf$|^Language$|^Input$|^Output$|^Expand$|^First$|^AnyArray$|^Length$",
+        },
       ],
     },
   },
