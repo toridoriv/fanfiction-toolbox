@@ -18,7 +18,7 @@ export default [
         "warn",
         {
           varsIgnorePattern:
-            "^KeyOf$|^Language$|^Input$|^Output$|^Expand$|^First$|^AnyArray$|^Length$",
+            "^KeyOf$|^Language$|^Input$|^Output$|^First$|^Any(?:\\w*)$|^Length$|^Curried(?:\\w*)$|^Expand(?:\\w*)$|^Reverse$",
         },
       ],
     },
