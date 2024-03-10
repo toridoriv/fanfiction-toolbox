@@ -1,9 +1,9 @@
 import { describe, it } from "node:test";
 
+import { faker } from "@faker-js/faker";
 import { expect } from "chai";
 
 import * as languages from "../../../lib/localization/languages.js";
-import { LanguageRandomizers } from "../../utils.js";
 
 describe("The function findByCode", () => {
   it("returns a language object by its code if it exists", () => {
@@ -45,40 +45,25 @@ describe("The function findByName", () => {
   });
 });
 
-describe("The function detect", () => {
-  for (const { language, faker } of LanguageRandomizers) {
-    it(`identifies a word in ${language.name}`, async () => {
-      const color = faker.color.human();
-      const detected = await languages.detect(color);
-
-      expect(detected.code).to.equal(language.code, `failed for color ${color}`);
+describe("The function isUndetermined", () => {
+  it("returns true if the received object matches UNDETERMINED language object", () => {
+    const result = languages.isUndetermined({
+      name: languages.UNDETERMINED.name,
+      code: languages.UNDETERMINED.code,
+      nativeName: languages.UNDETERMINED.nativeName,
+      direction: languages.UNDETERMINED.direction,
     });
-  }
-  // LanguageRandomizers.forEach(({ language, faker }) => {
-  //   it(`identifies a word in ${language.name}`, () => {
-  //     const color = faker.color.human();
-  //     const detected = languages.detect(color);
 
-  //     expect(detected.code).to.equal(language.code, `failed for color ${color}`);
-  //   });
+    expect(result).to.be.true;
+  });
+
+  it("returns false otherwise", () => {
+    const sample = faker.helpers.arrayElements(languages.LANGUAGES, 10);
+
+    for (const item of sample) {
+      const result = languages.isUndetermined(item);
+
+      expect(result).to.be.false;
+    }
+  });
 });
-// it("identifies words in English", () => {
-//   const color = fakerEN_US.color.human();
-//   const language = languages.detect(color);
-//   expect(language.code).to.equal("en");
-// });
-// it("identifies words in Spanish", () => {
-//   const color = fakerES_MX.color.human();
-//   const language = languages.detect(color);
-//   expect(language.code).to.equal("es");
-// });
-// it("identifies words in Japanese", () => {
-//   const color = fakerJA.color.human();
-//   const language = languages.detect(color);
-//   expect(language.code).to.equal("ja");
-// });
-// it("identifies words in Russian", () => {
-//   const color = fakerRU.color.human();
-//   const language = languages.detect(color);
-//   expect(language.code).to.equal("ru", "Expected ");
-// });
