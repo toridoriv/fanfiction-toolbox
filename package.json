@@ -34,10 +34,16 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
+    "@sglkc/kuroshiro": "^1.0.1",
+    "@sglkc/kuroshiro-analyzer-kuromoji": "^1.0.1",
     "@sinclair/typebox": "^0.32.14",
     "@toridoriv/cheerio": "^1.0.6",
     "@toridoriv/toolkit": "github:toridoriv/toolkit",
+    "cld": "^2.9.1",
+    "cyrillic-to-translit-js": "^3.2.1",
     "eld": "^1.0.0",
+    "openai": "^4.28.4",
+    "translit-rus-eng": "^1.0.8",
     "tslog": "^4.9.2",
     "zod": "^3.22.4"
   },
