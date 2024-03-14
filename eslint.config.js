@@ -1,5 +1,7 @@
 import { eslintConfig } from "@toridoriv/eslint-config";
 
+eslintConfig.ignorePatterns[0].ignores?.push("tmp/*");
+
 /**
  * @type {import("eslint").Linter.FlatConfig[]}
  */

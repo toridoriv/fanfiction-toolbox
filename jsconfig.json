@@ -32,7 +32,7 @@
     "useUnknownInCatchVariables": true,
   },
   "exclude": ["node_modules"],
-  "include": ["./*.js", "./lib/**/*.js", "./test/**/*.js"],
+  "include": ["./*.js", "./lib/**/*.js", "./test/**/*.js", "./lib/globals.d.ts"],
   "typeAcquisition": {
     "enable": false,
   },
